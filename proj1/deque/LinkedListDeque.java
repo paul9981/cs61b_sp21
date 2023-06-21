@@ -15,7 +15,7 @@ public class LinkedListDeque<T> {
     ListNode<T> tail;
     int size;
 
-    LinkedListDeque() {
+    public LinkedListDeque() {
         head = new ListNode<>(null);
         tail = head;
         size = 0;
