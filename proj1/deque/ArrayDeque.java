@@ -68,9 +68,6 @@ public class ArrayDeque<T> {
         }
 
         int firstInd = wrapIndex(headNext + 1);
-        if (firstInd > arr.length - 1) {              // SC, check if index is out of bond
-            firstInd = firstInd - arr.length;
-        }
 
         T item = arr[firstInd];
         arr[firstInd] = null;
@@ -87,9 +84,7 @@ public class ArrayDeque<T> {
         }
 
         int lastInd = wrapIndex(tailNext - 1);
-        if (lastInd < 0) {
-            lastInd = lastInd + arr.length;
-        }
+
         T item = arr[lastInd];
         arr[lastInd] = null;
         tailNext = lastInd;
