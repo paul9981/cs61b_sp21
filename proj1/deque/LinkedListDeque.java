@@ -53,13 +53,11 @@ public class LinkedListDeque<T> {
         }
 
         ListNode node = new ListNode(head.value);
-        if (head == tail) {
+        if (size == 1) {
             head = null;
             tail = null;
         } else {
-            ListNode temp = head;
             head = head.next;
-            temp = null;
         }
         size--;
         return (T)node.value;
@@ -72,7 +70,7 @@ public class LinkedListDeque<T> {
         }
 
         ListNode node = new ListNode(tail.value);
-        if (tail == head) {
+        if (size == 1) {
             tail = null;
             head = null;
         } else {
