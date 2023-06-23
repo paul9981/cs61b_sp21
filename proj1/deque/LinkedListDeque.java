@@ -22,27 +22,25 @@ public class LinkedListDeque<T> {
     }
 
     public void addFirst(T item) {
-        // add at head
-        if (head.value == null) {
+        if (isEmpty()) {
             head.value = item;
+            tail = head;
+        } else {
+            ListNode node = new ListNode(item);
+            node.next = head;
+            head = node;
         }
-        // add at middle and end
-        ListNode node = new ListNode(item);
-        node.next = head;
-        head = node;
         size++;
     }
 
     public void addLast(T item) {
-        // SC, when empty, add at head
-        if (isEmpty()) {
+        if (isEmpty()) {               // SC, empty
             tail.value = item;
-        }
-        // add at middle or end
-        tail.next = new ListNode<>(item);
-        tail = tail.next;
-        if (size == 1) {
-            head = head.next;
+            head = tail;
+        } else {
+            ListNode node = new ListNode(item);
+            tail.next = node;
+            tail = tail.next;
         }
         size++;
     }
