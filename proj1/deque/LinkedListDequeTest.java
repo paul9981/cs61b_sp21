@@ -2,6 +2,8 @@ package deque;
 
 import org.junit.Test;
 
+import static org.junit.Assert.assertEquals;
+
 
 /** Performs some basic linked list tests. */
 public class LinkedListDequeTest {
@@ -117,7 +119,7 @@ public class LinkedListDequeTest {
     @Test
     /* Add large number of elements to deque; check if order is correct. */
     public void bigLLDequeTest() {
-/*
+
         System.out.println("Make sure to uncomment the lines below (and delete this print statement).");
 
         LinkedListDeque<Integer> lld1 = new LinkedListDeque<Integer>();
@@ -132,7 +134,7 @@ public class LinkedListDequeTest {
         for (double i = 999999; i > 500000; i--) {
             assertEquals("Should have the same value", i, (double) lld1.removeLast(), 0.0);
         }
-*/
+
     }
 
     @Test
