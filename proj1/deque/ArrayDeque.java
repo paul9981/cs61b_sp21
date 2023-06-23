@@ -15,6 +15,7 @@ public class ArrayDeque<T> {
     }
 
     public void addFirst(T item) {
+        size++;
         if (needResize()) {
             resizeUp();
         }
@@ -28,10 +29,10 @@ public class ArrayDeque<T> {
         } else {
             headNext = arr.length - 1;
         }
-        size++;
     }
 
     public void addLast(T item) {
+        size++;
         if (needResize()) {
             resizeUp();
         }
@@ -45,7 +46,6 @@ public class ArrayDeque<T> {
         } else {
             tailNext = 0;
         }
-        size++;
     }
 
     public boolean isEmpty() {
