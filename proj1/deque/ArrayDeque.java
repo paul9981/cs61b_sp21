@@ -115,7 +115,9 @@ public class ArrayDeque<T> {
         // not needed or from beginning to the TailNext - 1
 
         int newHeadNext = arr.length - 1 - (old.length - 1 - headNext);
-        for (int i_old = headNext + 1, i_new = newHeadNext + 1; i_old < old.length && i_old < tailNext - 1; i_old++, i_new++) {
+        for (int i_old = headNext + 1, i_new = newHeadNext + 1;
+             i_old < old.length && i_old < tailNext - 1;
+             i_old++, i_new++) {
             arr[i_new] = old[i_old];
         }
 
@@ -123,6 +125,8 @@ public class ArrayDeque<T> {
             for (int i = 0; i < tailNext; i++) {
                 arr[i] = old[i];
             }
+        } else {
+            tailNext = newHeadNext + (tailNext - headNext);
         }
         headNext = newHeadNext;
     }

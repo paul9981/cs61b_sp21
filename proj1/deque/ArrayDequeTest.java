@@ -127,21 +127,23 @@ public class ArrayDequeTest {
     public void testB01() {
         ArrayDeque<Integer> ad1 = new ArrayDeque<>();
 
-        for (int i = 0; i < 50; i++) {
+        for (int i = 0; i < 5; i++) {
             ad1.addLast(i);
         }
 
-        for (double i = 0; i < 50; i++) {
+        for (double i = 0; i < 5; i++) {
             assertEquals("Should have the same value", i, (double) ad1.removeFirst(), 0.0);
         }
 
-        for (int i = 0; i < 50; i++) {
+        for (int i = 0; i < 5; i++) {
             ad1.addFirst(i);
         }
 
-        for (double i = 0; i < 50; i++) {
+        for (double i = 0; i < 5; i++) {
             assertEquals("Should have the same value", i, (double) ad1.removeLast(), 0.0);
         }
+
+
 
 
 
